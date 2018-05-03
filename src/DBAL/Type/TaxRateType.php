@@ -40,7 +40,7 @@ final class TaxRateType extends Type
         }
 
         try {
-            return new TaxRate($value);
+            return new TaxRate((int) $value);
         } catch (InvalidArgumentException $exception) {
             throw new ConversionException(
                 sprintf('Could not create tax rate from value "%d".', $value),

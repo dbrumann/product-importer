@@ -38,6 +38,6 @@ final class PriceType extends Type
             return $value;
         }
 
-        return Price::fromCents($value);
+        return Price::fromCents((int) $value);
     }
 }
